@@ -1,0 +1,9 @@
+matches:
+  - trigger: :ten
+    replace: Ŧ
+  - trigger: :lem
+    replace: Ł
+  - trigger: :pi
+    replace: π
+  - trigger: :tau
+    replace: τ

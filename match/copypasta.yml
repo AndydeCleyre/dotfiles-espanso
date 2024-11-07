@@ -1,0 +1,108 @@
+matches:
+  - trigger: :irv
+    replace: |-
+      Behold, my anti-IRV copypasta:
+
+      ---
+
+      Ranked choice AKA instant runoff voting AKA the arrogantly branded "the alternative vote" is *not* a good thing.
+
+      ---
+
+      Changing your ranking for a candidate to a *higher* one can *hurt* that candidate. Changing to a *lower* ranking can *help* that candidate. ***IRV fails the monotonicity criterion.***
+
+      ---
+
+      Changing from *not voting at all* to voting *for your favorite* candidates can *hurt* those candidates, causing your least favorite to win. ***IRV fails the participation criterion.***
+
+      ---
+
+      If candidate A is beating candidate B, adding some candidate C can *cause B to win*. ***IRV fails the independence of irrelevant alternatives criterion.*** In other words, ***it does not eliminate the spoiler effect.***
+
+      ---
+
+      There are strategic incentives to vote dishonestly.
+
+      Due to the way it works, *it does not and has not helped third parties.*
+
+      Votes cannot be processed locally; Auditing is a nightmare.
+
+      Et cetera.
+
+      ---
+
+      If you want a very good and simple single winner election, look to **approval voting**.
+
+
+      If you're interested in making that even better in some ways, look to a modification called **delegable yes/no voting**.
+
+
+      If that sounds pretty good but you think it could still be better, ask me about my minor modification idea.
+
+
+      ---
+
+      Enacting IRV is a way to *fake* meaningful voting reform, and build change fatigue, so that folks won't want to change the system yet again.
+
+      ---
+
+      > How can a change from not voting at all, to voting for favored candidates, hurt those candidates?
+
+      # Participation Criterion Failure
+
+      [Wikipedia offers a simple example](https://en.wikipedia.org/wiki/Participation_criterion#Instant-runoff_voting) of IRV violating the participation criterion, like this:
+
+      ---
+
+      2 voters are unsure whether to vote. 13 voters definitely vote, as follows:
+
+      - 6 rank `C`, `A`, `B`
+      - 4 rank `B`, `C`, `A`
+      - 3 rank `A`, `B`, `C`
+
+      If the 2 unsure voters don't vote, then `B` wins.
+
+      `A` is eliminated first in this case, for having the fewest top-rank ballots.
+
+      ---
+
+      The unsure voters both would rank `A`, `B`, `C`.
+
+      If they do vote, then `B` gets eliminated first, and `C` wins.
+
+      ---
+
+      By voting, those unsure voters changed the winner from their second choice to their last choice, due to the elimination method which is not as rational as first appears.
+
+      ---
+
+      > How can raising your ranking for a candidate hurt that candidate?
+
+      # Monotonicity Criterion Failure
+
+      [Wikipedia offers a less simple example](https://en.wikipedia.org/wiki/Monotonicity_criterion#Instant-runoff_voting_and_the_two-round_system_are_not_monotonic) of IRV violating the monotonicity criterion:
+
+      ---
+
+      100 voters go to the booths planning to rank as follows:
+
+      - 30 rank `A`, `B`, `C`
+      - 28 rank `C`, `B`, `A`
+      - 16 rank `B`, `A`, `C`
+      - 16 rank `B`, `C`, `A`
+      - 5 rank `A`, `C`, `B`
+      - 5 rank `C`, `A`, `B`
+
+      If this happens, `B` gets eliminated, and `A` wins.
+
+      ---
+
+      While in line, 2 folks who planned to rank `C`, `A`, `B` realize they actually prefer `A`.
+      They move `A` to the top: `A`, `C`, `B`.
+
+      Now `C` gets eliminated, and `B` wins.
+
+      ---
+
+      By promoting `A` from second to first choice,
+      those 2 voters changed the winner from `A`, their favorite, to `B`, their least favorite.
