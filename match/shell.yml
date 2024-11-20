@@ -23,7 +23,7 @@ matches:
   - trigger: :em
     replace: "emulate -L zsh"
   - trigger: :lines
-    replace: ${(f)"$($|$)"}
+    replace: (${(f)"$($|$)"})
   - trigger: :diff
     replace: |
       tmpfile=$(mktemp)
