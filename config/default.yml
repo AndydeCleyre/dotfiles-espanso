@@ -1,3 +1,4 @@
 # https://espanso.org/docs/
 search_shortcut: "CTRL+SHIFT+E"
+show_notifications: false
 undo_backspace: false
