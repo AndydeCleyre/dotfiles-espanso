@@ -1,4 +1,4 @@
-# https://espanso.org/docs/
+# https://espanso.org/docs/configuration/options/
 search_shortcut: "CTRL+SHIFT+E"
 show_notifications: false
 undo_backspace: false
