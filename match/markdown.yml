@@ -11,8 +11,7 @@ matches:
 
   - trigger: :``
     replace: |-
-      ```$|$
-      ```
+      ```$|$```
 
   - regex: :in(?P<depth>\d)
     replace: "{{indented}}"
