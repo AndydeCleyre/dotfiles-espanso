@@ -1,0 +1,4 @@
+filter_class: ^com\.mitchellh\.ghostty$
+paste_shortcut: CTRL+SHIFT+V
+disable_x11_fast_inject: true
+backend: clipboard
