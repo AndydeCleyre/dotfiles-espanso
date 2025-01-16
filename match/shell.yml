@@ -18,6 +18,15 @@ matches:
         type: shell
         params:
           cmd: xclip -sel clip -o | sed -E 's-^(https?|git)://github\.com/-git@github.com:-'
+  - trigger: :ubi
+    replace: 'mise use -g ubi:{{shortrepo}}'
+    vars:
+      - name: shortrepo
+        type: shell
+        params:
+          cmd: |
+            name=$(xclip -sel clip -o | grep -oE 'github\.com/([^/]+/[^/]+)' | cut -d/ -f2-3)
+            [[ $name =~ ^[^/[:space:]]+/[^/[:space:]]+$ ]] && printf '%s\n' "$name"
   - trigger: :dn
     replace: /dev/null
   - trigger: :em
