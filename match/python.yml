@@ -10,11 +10,11 @@ matches:
   - trigger: ":miselocal"
     replace: |-
       [env._.python]
-      venv = "{{exec(command='venvs_path')}}/venv"
+      venv = "\{\{exec(command='venvs_path')\}\}/venv"
 
       [hooks.enter]
       shell = "zsh"
-      script = "pips {{config_root}}/dev-requirements.txt"
+      script = "pips \{\{config_root\}\}/dev-requirements.txt"
   - trigger: ":bum"
     replace: |-
       from plumbum import local, CommandNotFound, ProcessExecutionError
