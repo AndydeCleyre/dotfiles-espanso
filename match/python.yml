@@ -14,7 +14,7 @@ matches:
 
       [hooks.enter]
       shell = "zsh"
-      script = "pips \{\{config_root\}\}/dev-requirements.txt"
+      script = "pips \{\{config_root\}\}/$|$requirements.txt"
   - trigger: ":bum"
     replace: |-
       from plumbum import local, CommandNotFound, ProcessExecutionError
