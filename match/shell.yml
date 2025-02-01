@@ -11,6 +11,8 @@ matches:
     replace: '"$(dirname "$0")"'
   - trigger: :gh
     replace: https://github.com/
+  - trigger: :ggh
+    replace: "git@github.com:"
   - trigger: :repo
     replace: '{{sshrepo}}'
     vars:
