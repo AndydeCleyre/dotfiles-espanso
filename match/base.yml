@@ -10,3 +10,11 @@ matches:
 
   - trigger: :--
     replace: '-- $|$ --'
+
+  - trigger: :paste
+    replace: '{{clipboard}}'
+    vars:
+      - name: clipboard
+        type: shell
+        params:
+          cmd: xclip -sel clip -o
