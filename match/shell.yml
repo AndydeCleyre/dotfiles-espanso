@@ -19,7 +19,7 @@ matches:
       - name: sshrepo
         type: shell
         params:
-          cmd: xclip -sel clip -o | sed -E 's-^(https?|git)://github\.com/-git@github.com:-'
+          cmd: xclip -sel clip -o | sed -E 's-^(https?|git)://([^/]+)/-git@\2:-'
   - trigger: :ubi
     replace: 'mise use -g ubi:{{shortrepo}}'
     vars:
