@@ -6,7 +6,7 @@ matches:
   - trigger: :vpy
     replace: "#!/usr/bin/env vpy\n"
   - trigger: ":dbg"
-    replace: "from IPython import embed; embed(colors='Neutral')"
+    replace: "from IPython import embed; embed(colors='neutral')"
   - trigger: ":miselocal"
     replace: |-
       [env._.python]
