@@ -9,6 +9,8 @@ matches:
     replace: '"$(git rev-parse --show-toplevel)"'
   - trigger: :here
     replace: '"$(dirname "$0")"'
+  - trigger: :pkg
+    replace: https://gitlab.archlinux.org/archlinux/packaging/packages/
   - trigger: :gh
     replace: https://github.com/
   - trigger: :ggh
