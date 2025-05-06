@@ -8,7 +8,7 @@ matches:
   - trigger: :gr
     replace: '"$(git rev-parse --show-toplevel)"'
   - trigger: :here
-    replace: '"$(dirname "$0")"'
+    replace: '"$PWD/$(dirname "$0")"'
   - trigger: :pkg
     replace: https://gitlab.archlinux.org/archlinux/packaging/packages/
   - trigger: :gh
