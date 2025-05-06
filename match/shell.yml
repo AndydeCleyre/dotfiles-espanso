@@ -11,6 +11,8 @@ matches:
     replace: '"$PWD/$(dirname "$0")"'
   - trigger: :pkg
     replace: https://gitlab.archlinux.org/archlinux/packaging/packages/
+  - trigger: :aur
+    replace: ssh://aur@aur.archlinux.org/
   - trigger: :gh
     replace: https://github.com/
   - trigger: :ggh
