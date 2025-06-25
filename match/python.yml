@@ -14,7 +14,42 @@ matches:
 
       [hooks.enter]
       shell = "zsh"
-      script = "pips \{\{config_root\}\}/$|$requirements.txt"
+      script = "pips \{\{config_root\}\}/local-$|$requirements.txt"
+  - trigger: ":misetoml"
+    replace: |-
+      [tools]
+      python = "3.13"
+
+      [env._.python]
+      venv = { path = ".venv", create = true }
+
+      [tasks.ensure-uv]
+      run = "command -v uv || python -m pip install uv"
+      hide = true
+
+      [vars]
+      pip_compile_args = "-q --python python --upgrade --no-header --annotation-style=line"
+
+      [tasks.bump-reqs]
+      depends = ["ensure-uv"]
+      run = [
+        "zsh -c '. ./.zpy/zpy.plugin.zsh; pypc -y'",
+        "uv pip compile \{\{vars.pip_compile_args\}\} requirements.in     -o $|$/requirements.txt",
+        "uv pip compile \{\{vars.pip_compile_args\}\} dev-requirements.in -o dev-requirements.txt"
+      ]
+
+      [tasks.install]
+      depends = ["ensure-uv"]
+      run = "uv pip install -p python -e '.[dev]' -c dev-requirements.txt"
+
+      [tasks.fmt]
+      depends = ["install"]
+      run = [
+        "ssort",
+        "ruff format",
+        "ruff check --fix",
+        "pyright --warnings"
+      ]
   - trigger: ":bum"
     replace: |-
       from plumbum import local, CommandNotFound, ProcessExecutionError
